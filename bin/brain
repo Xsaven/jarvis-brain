@@ -1,0 +1,28 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use Illuminate\Container\Container;
+use Illuminate\Events\Dispatcher;
+use Illuminate\Console\Application;
+use Brain\Foundation\Application as BrainApplication;
+use Brain\Database\DatabaseManager;
+
+$container = new BrainApplication();
+
+Container::setInstance($container);
+$container->instance('app', $container);
+
+$events = new Dispatcher($container);
+
+DatabaseManager::boot($container, $events);
+
+$app = new Application($container, $events, '1.0.0');
+
+$app->add(new \Brain\Console\Commands\InitCommand());
+
+$status = $app->run();
+
+exit($status);
+

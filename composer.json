@@ -1,0 +1,40 @@
+{
+  "name": "bfg/jarvis-brain",
+  "description": "The Brain CLI Tool for Agent Management",
+  "keywords": ["mcp", "tool", "cli"],
+  "type": "library",
+  "version": "v1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Xsaven",
+      "email": "xsaven@gmail.com",
+      "role": "Developer/Maintainer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Brain\\": "src/"
+    }
+  },
+  "bin": [
+    "bin/brain"
+  ],
+  "require": {
+    "php": "^8.2",
+    "illuminate/console": "^12.0",
+    "illuminate/database": "^12.0",
+    "composer/composer": "^2.8",
+    "symfony/var-dumper": "^7.3",
+    "yosymfony/toml": "^1.0",
+    "bfg/dto": "^1.9"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "Brain\\Composer\\Hooks::postInstall"
+    ],
+    "post-update-cmd": [
+      "Brain\\Composer\\Hooks::postUpdate"
+    ]
+  }
+}

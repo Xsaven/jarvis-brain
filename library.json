@@ -1,0 +1,219 @@
+{
+  "web-scout": {
+    "name": "Web Scout",
+    "description": "Web Scout MCP Server (DuckDuckGo powered)",
+    "keywords": ["web", "scrape", "search", "browse", "http", "https"],
+    "license": "MIT",
+    "author": "Pink Pixel",
+    "repository": "https://github.com/pinkpixel-dev/web-scout-mcp",
+    "icon": "🌐",
+    "required": [],
+    "template": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@pinkpixel/web-scout-mcp"
+      ]
+    }
+  },
+  "task-master-ai": {
+    "name": "Task Master AI",
+    "description": "A task management system for AI-driven development",
+    "keywords": ["task", "management"],
+    "license": "MIT WITH Commons-Clause",
+    "author": "Eyal Toledano",
+    "repository": "https://github.com/eyaltoledano/claude-task-master",
+    "icon": "🤖",
+    "required": [],
+    "template": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "--package=task-master-ai",
+        "task-master-ai"
+      ]
+    }
+  },
+  "context7": {
+    "name": "Context7",
+    "description": "Up-to-date code documentation for any prompt",
+    "keywords": ["context", "documentation", "doc", "docs", "code"],
+    "license": "MIT",
+    "author": "Abdush",
+    "repository": "https://github.com/upstash/context7",
+    "icon": "📚",
+    "required": [],
+    "template": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp",
+        "--api-key",
+        "{credential:context7_api_key}"
+      ]
+    }
+  },
+  "puppeteer": {
+    "name": "Puppeteer",
+    "description": "Headless Chrome Node API",
+    "keywords": ["puppeteer", "chrome", "headless", "scrape", "automation", "browser"],
+    "license": "MIT",
+    "author": "Anthropic, PBC (https://anthropic.com)",
+    "repository": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/puppeteer",
+    "icon": "🕷️",
+    "required": [],
+    "template": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ],
+      "env": {
+        "PUPPETEER_LAUNCH_OPTIONS": "{ \"executablePath\": \"{credential:executablePath}\", \"headless\": {credential:puppeteer_headless:'false','true'}, \"devtools\": {credential:devtools:'false','true'}, \"args\": [] }",
+        "ALLOW_DANGEROUS": "true"
+      }
+    }
+  },
+  "laravel-boost": {
+    "name": "Laravel Boost",
+    "description": "Laravel Boost accelerates AI-assisted",
+    "keywords": ["laravel", "php", "framework", "optimize", "analyze"],
+    "license": "MIT",
+    "author": "Laravel Community",
+    "repository": "https://github.com/laravel/boost",
+    "icon": "🚀",
+    "required": ["laravel"],
+    "template": {
+      "type": "stdio",
+      "command": "{credential:laravel_boost_exec:'php','vendor/bin/sail'}",
+      "args": [
+        "artisan",
+        "boost:mcp"
+      ]
+    }
+  },
+  "time": {
+    "name": "Time",
+    "description": "Time MCP Server (with timezone support)",
+    "keywords": ["time", "date", "timezone", "clock"],
+    "license": "MIT",
+    "author": "Mariusz 'maledorak' Korzekwa",
+    "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
+    "icon": "⏰",
+    "required": [],
+    "template": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "mcp-server-time",
+        "--local-timezone={credential:time_timezone:Europe/Kyiv}"
+      ]
+    }
+  },
+  "sequential-thinking": {
+    "name": "Sequential Thinking",
+    "description": "A server that enables sequential thinking for AI models",
+    "keywords": ["sequential", "thinking", "steps", "complex", "tasks"],
+    "license": "MIT",
+    "author": "Anthropic, PBC (https://anthropic.com)",
+    "repository": "https://github.com/modelcontextprotocol/servers/tree/HEAD/src/sequentialthinking",
+    "icon": "🧠",
+    "required": [],
+    "template": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    }
+  },
+  "memory": {
+    "name": "Memory",
+    "description": "A simple in-memory storage server",
+    "keywords": ["memory", "storage", "data", "in-memory"],
+    "license": "MIT",
+    "author": "Anthropic, PBC (https://anthropic.com)",
+    "repository": "https://github.com/modelcontextprotocol/servers/tree/bf293463200a74ff6724fb14a7f3954aed74de96/src/memory",
+    "icon": "🧠",
+    "required": [],
+    "template": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "env": {
+        "MEMORY_FILE_PATH": "{var:project_dir}/memory.json"
+      }
+    }
+  },
+  "git": {
+    "name": "Git",
+    "description": "A server that provides Git functionalities",
+    "keywords": ["git", "version control", "repository", "collaboration"],
+    "license": "MIT",
+    "author": "Anthropic, PBC (https://anthropic.com)",
+    "repository": "https://github.com/modelcontextprotocol/servers/tree/bf293463200a74ff6724fb14a7f3954aed74de96/src/git",
+    "icon": "🔧",
+    "required": ["git"],
+    "template": {
+      "command": "uvx",
+      "args": ["mcp-server-git"]
+    }
+  },
+  "filesystem": {
+    "name": "Filesystem",
+    "description": "A server that provides filesystem access",
+    "keywords": ["filesystem", "file", "read", "write", "data"],
+    "license": "MIT",
+    "author": "Anthropic, PBC (https://anthropic.com)",
+    "repository": "https://github.com/modelcontextprotocol/servers/tree/bf293463200a74ff6724fb14a7f3954aed74de96/src/filesystem",
+    "icon": "🗂️",
+    "required": [],
+    "template": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "{var:project_dir}"
+      ]
+    }
+  },
+  "fetch": {
+    "name": "Fetch",
+    "description": "A server that enables AI models to perform HTTP requests",
+    "keywords": ["fetch", "http", "https", "api", "request", "web"],
+    "license": "MIT",
+    "author": "Anthropic, PBC (https://anthropic.com)",
+    "repository": "https://github.com/modelcontextprotocol/servers/tree/bf293463200a74ff6724fb14a7f3954aed74de96/src/fetch",
+    "icon": "🌐",
+    "required": [],
+    "template": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-fetch"
+      ]
+    }
+  },
+  "hyperbrowser": {
+    "name": "HyperBrowser",
+    "description": "It provides various tools to scrape, extract structured data, and crawl webpages.",
+    "keywords": ["browser", "web", "navigate", "interact", "http", "https"],
+    "license": "ISC",
+    "author": "hyperbrowser.ai",
+    "repository": "https://github.com/hyperbrowserai/mcp",
+    "icon": "🌐",
+    "required": [],
+    "template": {
+      "command": "npx",
+      "args": ["-y", "hyperbrowser-mcp"],
+      "env": {
+        "HYPERBROWSER_API_KEY": "{credential:hyperbrowser_api_key}"
+      }
+    }
+  }
+}
