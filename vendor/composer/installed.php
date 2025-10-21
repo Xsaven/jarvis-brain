@@ -154,6 +154,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'illuminate/config' => array(
+            'pretty_version' => 'v12.34.0',
+            'version' => '12.34.0.0',
+            'reference' => '06c8e1dc8fc890562eab7609d6454aa98f49da5c',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../illuminate/config',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'illuminate/console' => array(
             'pretty_version' => 'v12.28.1',
             'version' => '12.28.1.0',

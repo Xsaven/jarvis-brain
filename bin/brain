@@ -8,11 +8,18 @@ use Illuminate\Events\Dispatcher;
 use Illuminate\Console\Application;
 use Brain\Foundation\Application as BrainApplication;
 use Brain\Database\DatabaseManager;
+use Brain\Config\ConfigManager;
+
+use Illuminate\Support\Facades\Facade;
 
 $container = new BrainApplication();
 
 Container::setInstance($container);
 $container->instance('app', $container);
+
+// Enable facades and configuration repository
+Facade::setFacadeApplication($container);
+ConfigManager::boot($container);
 
 $events = new Dispatcher($container);
 
@@ -25,4 +32,3 @@ $app->add(new \Brain\Console\Commands\InitCommand());
 $status = $app->run();
 
 exit($status);
-

@@ -51,6 +51,7 @@ return array(
     'Illuminate\\Contracts\\' => array($vendorDir . '/illuminate/contracts'),
     'Illuminate\\Container\\' => array($vendorDir . '/illuminate/container'),
     'Illuminate\\Console\\' => array($vendorDir . '/illuminate/console'),
+    'Illuminate\\Config\\' => array($vendorDir . '/illuminate/config'),
     'Illuminate\\Bus\\' => array($vendorDir . '/illuminate/bus'),
     'Doctrine\\Inflector\\' => array($vendorDir . '/doctrine/inflector/src'),
     'Composer\\XdebugHandler\\' => array($vendorDir . '/composer/xdebug-handler/src'),

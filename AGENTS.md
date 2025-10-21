@@ -25,3 +25,18 @@ No Git history ships with this snapshot, so default to Conventional Commits (e.g
 
 ## Configuration & Security Tips
 Keep secrets out of source control; rely on the `credentials` table for runtime storage and never hard-code defaults in `library.json`. Use `MCPC_DB_PATH` to isolate development databases per environment, and confirm file permissions when running on shared machines. Update schema definitions alongside any new agent attributes to maintain autocompletion fidelity.
+
+# About Project
+
+This project is the basis for any AI CLI tool. It is a CLI tool written in Laravel. And it was created to keep instructions 
+and settings for everything needed for the AI CLI Agent in the `.brain` folder in a single Yaml format with schemas 
+`# yaml-language-server: $schema=https://raw.githubusercontent.com/Xsaven/jarvis-brain/refs/heads/master/schema/barin.json` 
+for autocompletion. This tool is installed globally through composer and is available anywhere from the terminal. 
+Compiling configs for agents will depend on the selected tool, first it will be compiled into configs for Claude code CLI 
+and for Codex CLI. Then in the future we will add Gemini CLI and Qwen CLI. Since AI understands xml better, all instructions 
+will be compiled in xml format with the most thoughtful neural xml methods for the agent and subagents. 
+Also, general control of the MCP by tools, also in a single format in Yaml and will be compiled for different agents. 
+It is possible to compile for several agents at the same time. The advantage of this approach is that in one place and 
+in one format we configure the brain and it will then compile into configs for any other agent, if for example the 
+limits on Codex CLI have run out, then we can recompile under Claude Code CLI and continue working without straining for 
+new settings, everything is unified to Yaml format and conveniently compiled into configs for the agent. 

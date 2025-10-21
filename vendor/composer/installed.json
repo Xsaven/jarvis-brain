@@ -1101,6 +1101,57 @@
             "install-path": "../illuminate/conditionable"
         },
         {
+            "name": "illuminate/config",
+            "version": "v12.34.0",
+            "version_normalized": "12.34.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/config.git",
+                "reference": "06c8e1dc8fc890562eab7609d6454aa98f49da5c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/config/zipball/06c8e1dc8fc890562eab7609d6454aa98f49da5c",
+                "reference": "06c8e1dc8fc890562eab7609d6454aa98f49da5c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/collections": "^12.0",
+                "illuminate/contracts": "^12.0",
+                "php": "^8.2"
+            },
+            "time": "2025-07-02T22:34:43+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "12.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\Config\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The Illuminate Config package.",
+            "homepage": "https://laravel.com",
+            "support": {
+                "issues": "https://github.com/laravel/framework/issues",
+                "source": "https://github.com/laravel/framework"
+            },
+            "install-path": "../illuminate/config"
+        },
+        {
             "name": "illuminate/console",
             "version": "v12.28.1",
             "version_normalized": "12.28.1.0",

@@ -109,6 +109,7 @@ class ComposerStaticInitf4bced16b3db36167e0d1eed7f4bac99
             'Illuminate\\Contracts\\' => 21,
             'Illuminate\\Container\\' => 21,
             'Illuminate\\Console\\' => 19,
+            'Illuminate\\Config\\' => 18,
             'Illuminate\\Bus\\' => 15,
         ),
         'D' => 
@@ -319,6 +320,10 @@ class ComposerStaticInitf4bced16b3db36167e0d1eed7f4bac99
         'Illuminate\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/illuminate/console',
+        ),
+        'Illuminate\\Config\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/config',
         ),
         'Illuminate\\Bus\\' => 
         array (
