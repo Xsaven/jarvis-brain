@@ -8,6 +8,6 @@ return [
     'dir' => '.brain',
 
     // Default schema URL for YAML authoring assistance
-    'schema_url' => 'https://raw.githubusercontent.com/Xsaven/jarvis-brain/refs/tags/{version}/schema/{name}.json',
+    'schema_url' => 'https://cdn.jsdelivr.net/gh/Xsaven/jarvis-brain@{version}/schema/{name}.json',
 ];
 
