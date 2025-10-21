@@ -9,5 +9,6 @@ return [
 
     // Default schema URL for YAML authoring assistance
     'schema_url' => 'https://cdn.jsdelivr.net/gh/Xsaven/jarvis-brain@master/schema/{name}.json',
+    'schema_url' => 'https://raw.githack.com/Xsaven/jarvis-brain/{version}/schema/{name}.json',
 ];
 
