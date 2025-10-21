@@ -1,4 +1,4 @@
 # yaml-language-server: $schema=https://getcomposer.org/schema.json
 repositories:
-  - type: path
-    url: ./packages/*
+  - type: git
+name:
