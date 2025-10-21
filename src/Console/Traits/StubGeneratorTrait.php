@@ -12,7 +12,7 @@ trait StubGeneratorTrait
     public function generateFile(
         string $relativeFilePath,
         string $stubName,
-        array $replacements
+        array $replacements = [],
     ): bool {
         $content = $this->generateStub($stubName, $replacements);
         $fullPath = Brain::workingDirectory() . DS . $relativeFilePath;
@@ -21,7 +21,7 @@ trait StubGeneratorTrait
             mkdir($directory, 0755, true);
         }
         if (file_exists($fullPath) && ! $this->option('force')) {
-            $this->components->info("File {$relativeFilePath} already exists. Use --force to overwrite.");
+            $this->components->warn("File {$relativeFilePath} already exists. Use --force to overwrite.");
             return false;
         }
         $result = file_put_contents($fullPath, $content);
@@ -29,7 +29,7 @@ trait StubGeneratorTrait
             $this->components->error("Failed to write file {$relativeFilePath}.");
             return false;
         }
-        $this->components->info("File {$relativeFilePath} created successfully.");
+        $this->components->success("File {$relativeFilePath} created successfully.");
         return true;
     }
 
@@ -41,6 +41,6 @@ trait StubGeneratorTrait
             throw new \RuntimeException("Stub file {$stubName}.stub does not exist in " . $commandDirectory . DS . "stubs" . DS);
         }
         $stubContent = file_get_contents($stubPath);
-        return tag_replace($stubContent, $replacements, '{{*}}');
+        return tag_replace($stubContent, $replacements, '{{ * }}');
     }
 }

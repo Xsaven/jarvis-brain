@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-defined("DS") || define("DS", DIRECTORY_SEPARATOR);
-
 if (!function_exists("config")) {
     /**
      * Get the specified configuration value.

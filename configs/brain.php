@@ -8,12 +8,6 @@ return [
     'dir' => '.brain',
 
     // Default schema URL for YAML authoring assistance
-    'schema_url' => 'https://raw.githubusercontent.com/Xsaven/jarvis-brain/refs/heads/master/schema/{name}.json',
-
-    // Optional: allow overriding database path via env as today
-    // Kept here for discoverability; DatabaseManager still honors MCPC_DB_PATH
-    'database' => [
-        'env_path' => 'MCPC_DB_PATH',
-    ],
+    'schema_url' => 'https://raw.githubusercontent.com/Xsaven/jarvis-brain/refs/tags/{version}/schema/{name}.json',
 ];
 
