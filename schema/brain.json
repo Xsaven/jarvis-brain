@@ -1,7 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft-04/schema#",
+  "$id": "https://cdn.jsdelivr.net/gh/Xsaven/jarvis-brain@v0.0.1/schema/brain.json",
   "title": "Jarvis Brain",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "name": {
       "type": "string",
