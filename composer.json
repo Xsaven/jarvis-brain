@@ -3,6 +3,7 @@
   "description": "The Brain CLI Tool for Agent Management",
   "keywords": ["mcp", "tool", "cli"],
   "type": "library",
+  "version": "v0.0.1",
   "license": "MIT",
   "authors": [
     {
